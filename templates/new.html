@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<style>
+			<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+			.button {display: block;width: 55px;height: 25px;background: black;text-align: center;border-radius: 1px;border-color: white;color: white;}
+		</style>
+	<head>
+	<body>
+		<a href="/restaurants">Back to restaurant list</a>
+		<h1>Create New Menu Item</h1>
+		<form action="{{url_for('newMenuItem', restaurant_id = restaurant_id)}}" method='POST'>
+			
+			<p>Name:</p>
+				<input type="text" name="name" size="24"><br><br>
+				<input type="submit" value="Create"><br>				<a class="button" href= "{{url_for('restaurantMenu', restaurant_id= restaurant_id)}}">Cancel</a>
+
+
+	</body>
+</html>
